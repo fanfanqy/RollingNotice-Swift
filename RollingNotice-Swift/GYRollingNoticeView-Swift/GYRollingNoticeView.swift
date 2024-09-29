@@ -113,7 +113,7 @@ open class GYRollingNoticeView: UIView {
         
         timer = Timer.scheduledTimer(timeInterval: stayInterval, target: self, selector: #selector(GYRollingNoticeView.timerHandle), userInfo: nil, repeats: true)
         if let __timer = timer {
-            RunLoop.current.add(__timer, forMode: .common)
+            RunLoop.current.add(__timer, forMode: .default)
         }
         resume()
         
