@@ -44,8 +44,9 @@ open class GYRollingNoticeView: UIView {
         var tempDict = Dictionary<String, Any>()
         return tempDict
     }()
-    private lazy var reuseCells: Array = { () -> [GYNoticeViewCell] in
-        var tempArr = Array<GYNoticeViewCell>()
+
+    lazy var reuseCells: SafeArray<GYNoticeViewCell> = {
+        var tempArr = SafeArray<GYNoticeViewCell>()
         return tempArr
     }()
     
@@ -64,11 +65,17 @@ open class GYRollingNoticeView: UIView {
     }
     
     open func dequeueReusableCell(withIdentifier identifier: String) -> GYNoticeViewCell? {
-        for cell in self.reuseCells {
-            guard let reuseIdentifier = cell.reuseIdentifier else { return nil }
+        var tempCell:GYNoticeViewCell?
+        self.reuseCells.forEach { cell in
+            let reuseIdentifier = cell.reuseIdentifier ?? ""
             if reuseIdentifier.elementsEqual(identifier) {
-                return cell
+                tempCell = cell
+                
             }
+        }
+        if tempCell != nil {
+            return tempCell
+            
         }
         
         if let cellCls = self.cellClsDict[identifier] {
@@ -248,8 +255,12 @@ extension GYRollingNoticeView{
             print(String(format: "willShowCell %p", _wCell))
         }
         
-        let currentCellIdx = self.reuseCells.firstIndex(of: _cCell)
-        let willShowCellIdx = self.reuseCells.firstIndex(of: _wCell)
+        let currentCellIdx = self.reuseCells.index { cell in
+            return cell == _cCell
+        }
+        let willShowCellIdx = self.reuseCells.index { cell in
+            return cell == _wCell
+        }
         
         if let index = currentCellIdx {
             self.reuseCells.remove(at: index)

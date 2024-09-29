@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67DB19072CA94F010019C23D /* SafeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DB19062CA94F010019C23D /* SafeArray.swift */; };
 		9171425B1FE12CF000B6C78A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171425A1FE12CF000B6C78A /* AppDelegate.swift */; };
 		9171425D1FE12CF000B6C78A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171425C1FE12CF000B6C78A /* ViewController.swift */; };
 		917142601FE12CF000B6C78A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9171425E1FE12CF000B6C78A /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67DB19062CA94F010019C23D /* SafeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeArray.swift; sourceTree = "<group>"; };
 		917142571FE12CF000B6C78A /* RollingNotice-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RollingNotice-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9171425A1FE12CF000B6C78A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9171425C1FE12CF000B6C78A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				9171426D1FE12D2F00B6C78A /* GYRollingNoticeView.swift */,
 				919D656E1FE27506001AE89C /* GYNoticeViewCell.swift */,
+				67DB19062CA94F010019C23D /* SafeArray.swift */,
 			);
 			path = "GYRollingNoticeView-Swift";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				9182AE861FE3BA45003F03A3 /* CustomNoticeCell2.swift in Sources */,
 				9182AE801FE3A3AE003F03A3 /* CustomNoticeCell.swift in Sources */,
 				9171425B1FE12CF000B6C78A /* AppDelegate.swift in Sources */,
+				67DB19072CA94F010019C23D /* SafeArray.swift in Sources */,
 				919D656F1FE27506001AE89C /* GYNoticeViewCell.swift in Sources */,
 				9171426E1FE12D2F00B6C78A /* GYRollingNoticeView.swift in Sources */,
 			);
@@ -311,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UPU9HJJN5G;
 				INFOPLIST_FILE = "RollingNotice-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qmcaifu.RollingNotice-Swift";
@@ -326,6 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UPU9HJJN5G;
 				INFOPLIST_FILE = "RollingNotice-Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qmcaifu.RollingNotice-Swift";
