@@ -263,11 +263,15 @@ extension GYRollingNoticeView{
         }
         
         if let index = currentCellIdx {
-            self.reuseCells.remove(at: index)
+            if self.reuseCells[index] != nil {
+                self.reuseCells.remove(at: index)
+            }
         }
         
         if let index = willShowCellIdx {
-            self.reuseCells.remove(at: index)
+            if self.reuseCells[index] != nil {
+                self.reuseCells.remove(at: index)
+            }
         }
         
     }
